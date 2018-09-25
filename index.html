@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Custom Google Search</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css?v=3.0">
+</head>
+
+<body>
+  <div class="header">
+    <div id ="header-container">
+      <h1>Vyhľadávanie Google</h1>
+      <form id="search-form">
+        <input id="search-query" type="text" placeholder="Zadaj hľadaný výraz" name="search"/>
+        <input id="submit-button" type="submit" value="VYHĽADAŤ"/>
+      </form>
+      <div id="alert" class="hide">
+      </div>
+    </div>
+  </div>
+  <div id="modal" class="hide">
+    <div class="modal-image" id="modal-image">
+      <button class="close" onclick="hideModal()">✕</button>
+      <button class="img-address" id="img-address"></button>
+    </div>
+    <div class="backdrop">
+    </div>
+  </div>
+  <div id="results-container">
+    <div id="no-images" class="no-results hide">
+      <p>Zero images found.</p>
+    </div>
+    <div id="no-webs" class="no-results hide">
+      <p>Zero web pages found.</p>
+    </div>
+    <div id="images-container">
+      <div class='image-container' id='image-card-0'>
+      </div>
+      <div class='image-container' id='image-card-1'>
+      </div>
+      <div class='image-container' id='image-card-2'>
+      </div>
+      <div class='image-container' id='image-card-3'>
+      </div>
+      <div class='image-container' id='image-card-4'>
+      </div>
+      <div class='image-container' id='image-card-5'>
+      </div>
+      <div class='image-container' id='image-card-6'>
+      </div>
+      <div class='image-container' id='image-card-7'>
+      </div>
+      <div class='image-container' id='image-card-8'>
+      </div>
+      <div class='image-container' id='image-card-9'>
+      </div>
+      <div class='image-container' id='image-card-10'>
+      </div>
+      <div class='image-container' id='image-card-11'>
+      </div>
+      <div class='image-container' id='image-card-12'>
+      </div>
+      <div class='image-container' id='image-card-13'>
+      </div>
+      <div class='image-container' id='image-card-14'>
+      </div>
+      <div class='image-container' id='image-card-15'>
+      </div>
+      <div class='image-container' id='image-card-16'>
+      </div>
+      <div class='image-container' id='image-card-17'>
+      </div>
+    </div>
+    <div id="webs-container">
+      <a href="" class='web-container' id='web-card-0'>
+      </a>
+      <a href="" class='web-container' id='web-card-1'>
+      </a>
+      <a href="" class='web-container' id='web-card-2'>
+      </a>
+      <a href="" class='web-container' id='web-card-3'>
+      </a>
+      <a href="" class='web-container' id='web-card-4'>
+      </a>
+      <a href="" class='web-container' id='web-card-5'>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

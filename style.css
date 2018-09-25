@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(70, 90, 120, 0.05);
+  font-family: helvetica, Arial, sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
+
+.header {
+  background-color: navy;
+  margin: 0px;
+  padding: 50px;
+}
+
+#header-container {
+  width: 945px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: white;
+  font-family: helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+#alert {
+  margin-top: 30px;
+  padding: 11px;
+  border: 1px solid rgba(180,180,180,.5);
+  border-radius: 5px;
+  background-color: rgba(220,220,220,.5);
+  color: white;
+  display: inline-table;
+  vertical-align: center;
+}
+
+#search-query{
+  width: 300px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 12px;
+  vertical-align: center;
+  outline: none;
+  border: none;
+}
+
+#submit-button {
+  color: navy;
+  font-size: 15px;
+  width: 100px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255,255,255,.5);
+}
+
+#submit-button:hover {
+  background-color: rgba(255,255,255,.7);
+}
+
+#submit-button:active {
+  background-color: rgba(255,255,255,.9);
+  outline: none;
+}
+
+#results-container {
+  margin: 26px auto;
+  width: 1000px;
+}
+
+.no-results {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 5px;
+  width: 410px;
+  margin: 20px;
+  margin-right: 13px;
+  margin-top: 26px;
+  text-align: center;
+  color: rgb(150,150,150);
+  border: 2px dashed rgb(150,150,150);
+  padding: 20px;
+}
+
+.no-results>p {
+  margin: 42px 0;
+}
+
+#images-container {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 5px;
+  width: 463px;
+  min-height: 908px;
+  margin: 20px;
+  margin-right: 13px;
+  margin-top: 20px;
+  /* display: none; */
+}
+
+.image-container {
+  background-image: url("http://tsitouridi-gep.gr/wp-content/uploads/2014/04/placeholder4.png");
+  background-size: cover;
+  background-position: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  transition-duration: 200ms;
+  transition-property: transform, box-shadow, margin, opacity, width;
+  box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+  cursor: pointer;
+}
+
+.image-container:hover {
+  box-shadow: none;
+  /* box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.302); */
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.202);
+  transform: scale(1.08);
+}
+
+#webs-container {
+  vertical-align: top;
+  display: inline-block;
+  box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+  border-radius: 5px;
+  width: 457px;
+  min-height: 908px;
+  margin: 26px;
+  margin-left: 13px;
+  background-color: white;
+  /* display:none; */
+}
+
+.web-container {
+  height: 154.5px;
+  width: 457px;
+  display: inline-block;
+  transition-duration: 200ms;
+  transition-property: transform, box-shadow, margin, opacity, width,
+    border-radius;
+  box-shadow: 0 1px 0px 0 rgba(60, 64, 67, 0.149);
+  cursor: pointer;
+  text-decoration: none !important;
+  color: black;
+  /* margin-bottom: -4px; */
+}
+
+.web-container > h2 {
+  color: #1a0dab;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  margin-left: 25px;
+  padding-right: 25px;
+}
+
+.web-container > h4 {
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 25px;
+  padding-right: 25px;
+}
+
+.web-container > p {
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 25px;
+  padding-right: 25px;
+}
+
+.web-container:first-of-type {
+  border-radius: 5px 5px 0 0;
+  height: 145px;
+}
+
+.web-container:last-of-type {
+  border-radius: 0 0 5px 5px;
+  height: 145px;
+}
+
+.web-container:hover {
+  box-shadow: none;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.202);
+}
+.backdrop{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.modal-image {
+  background-color: black;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  border: 1px solid grey;
+  z-index: 100;
+  border-radius: 5px;
+  background-image: url('https://www.ilovewallpaper.ie/images/i-love-wallpaper-warehouse-photographic-brick-effect-wallpaper-white-grey-ilw261454-p2671-9190_medium.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  border: none;
+  z-index: 102;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.402);
+}
+
+.close{
+  float: right;
+  width:40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(25,25,25,.8);
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+
+.close:hover{
+  background-color: rgba(255,255,255,.4);
+}
+
+.close:active{
+  background-color: rgba(255,255,255,.5);
+}
+
+.img-address{
+  border: none;
+  outline: none;
+  /* background-color: rgba(25,25,25,.8); */
+  background-color: rgba(0,0,0,0);
+  height: 50px;
+  border-radius: 4.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  font-size: 12px;
+  cursor: pointer;
+  color: white;
+  box-shadow: inset 0px -40px 25px -13px rgba(0,0,0,0.65);
+  transition: box-shadow .5s ease-in-out;
+  padding-top: 20px;
+}
+
+.img-address:hover{
+  box-shadow: inset 0px -45px 30px -13px rgba(0,0,0,0.80);
+  text-decoration: underline;
+}
